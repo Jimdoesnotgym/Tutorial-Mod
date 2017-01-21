@@ -4,6 +4,7 @@ package com.jimdoesnotgym.tutorial;
  * Created by ms076 on 2017-01-18.
  */
 
+import com.jimdoesnotgym.tutorial.items.ModItems;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -16,7 +17,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent e){
-
+        // createItems() called here because item needs to be registered in both client and server proxies
+        ModItems.registerItems();
     }
 
     public void init(FMLInitializationEvent e){

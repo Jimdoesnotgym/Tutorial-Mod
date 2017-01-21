@@ -1,5 +1,6 @@
 package com.jimdoesnotgym.tutorial;
 
+import com.jimdoesnotgym.tutorial.items.ModItems;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -27,6 +28,7 @@ public class Main{
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent e) {
+        ModItems.preInit();
     }
 
     @EventHandler
