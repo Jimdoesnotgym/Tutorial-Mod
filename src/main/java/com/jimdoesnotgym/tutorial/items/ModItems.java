@@ -17,7 +17,7 @@ public final class ModItems {
     public static Item tutorialItem;
 
     public static void preInit(){
-        tutorialItem = new Item().setUnlocalizedName("tutorial_item");
+        tutorialItem = new Item().setUnlocalizedName("tutorial_item").setCreativeTab(Main.tabTutorial);
 
         registerItems();
     }
